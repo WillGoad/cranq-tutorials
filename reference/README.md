@@ -1,0 +1,67 @@
+TODO: contents
+
+- purpose
+- how to use
+
+# Contents
+
+- __Managing application flow__
+  - [Junctions](1_application_flow/1_1_junctions/README.md#junctions)
+    - [Example - Using conditions](1_application_flow/1_1_junctions/README.md#example-21---using-conditions)
+    - [Example - Using forks](1_application_flow/1_1_junctions/README.md#example-22---using-forks)
+    - [Example - Using gates](1_application_flow/1_1_junctions/README.md#example-23---using-gates)
+  - [Iterators / loops](1_application_flow/1_2_iterators/README.md#iterators--loops)
+    - [Example - simple foreach](1_application_flow/1_2_iterators/README.md#example-21---simple-foreach)
+    - [Example - Parallel filtering](1_application_flow/1_2_iterators/README.md#example-22---parallel-filtering)
+    - [Example - Synchronous filtering](1_application_flow/1_2_iterators/README.md#example-31---synchronous-filtering)
+    - [Example - Reduction](#1_application_flow/1_2_iterators/README.mdexample-33---reduction)
+    - [Example - Polling](1_application_flow/1_2_iterators/README.md#example-41---polling)
+  - [Synchronization](1_application_flow/1_3_synchronization/README.md#synchronization)
+    - [Example - Synchronizing node inputs](1_application_flow/1_3_synchronization/README.md#example-131-synchronizing-node-inputs)
+    - [Example - Multiplexing & demultiplexing](1_application_flow/1_3_synchronization/README.md#example-132-multiplexing--demultiplexing)
+    - [Example - Using parameters with iterators](1_application_flow/1_3_synchronization/README.md#example-133-using-parameters-with-iterators)
+- __Constructing data__
+   - [Using setters & deleters](2_constructing_data/2_1_setters_deleters/README.md#using-setters--deleters)
+      - [Example - Adding/assigning items to dictionaries](2_constructing_data/2_1_setters_deleters/README.md#example-211-addingassigning-items-to-dictionaries)
+      - [Example - Inserting items into arrays](2_constructing_data/2_1_setters_deleters/README.md#example-212-inserting-items-into-arrays)
+      - [Example - Deleting items from dictionaries](2_constructing_data/2_1_setters_deleters/README.md#example-213-deleting-items-from-dictionaries)
+      - [Example - Deleting items from arrays](2_constructing_data/2_1_setters_deleters/README.md#example-214-deleting-items-from-arrays)
+  - [Using builders](2_constructing_data/2_2_builders/README.md#using-builders)
+    - [Example - Initializing an empty array](2_constructing_data/2_2_builders/README.md#example-11-initializing-an-empty-array)
+    - [Example - Building a complex type](2_constructing_data/2_2_builders/README.md#example-12-building-a-complex-type)
+  - [Merging & concatenation](2_constructing_data/2_3_merge_concat/README.md#merging--concatenation)
+    - [Example - Merging dictionaries](2_constructing_data/2_3_merge_concat/README.md#example-241-merging-dictionaries)
+    - [Example - Concatenating arrays](2_constructing_data/2_3_merge_concat/README.md#example-242-concatenating-arrays)
+  - [Using the flow/Syncer & Splitter nodes for data manipulation](2_constructing_data/2_4_syncer_splitter/README.md#using-the-flowsyncer--splitter-nodes-for-data-manipulation)
+    - [Example - Initializing an array with values](2_constructing_data/2_4_syncer_splitter/README.md#example-241-initializing-an-array-with-values)
+    - [Example - Combining structures](2_constructing_data/2_4_syncer_splitter/README.md#example-242-combining-structures)
+    - [Example - Splitting structures](2_constructing_data/2_4_syncer_splitter/README.md#example-243-splitting-structures)
+  - [Using templates](2_constructing_data/2_5_templating/README.md#using-templates)
+    - [Example - Filling string templates](2_constructing_data/2_5_templating/README.md#example-251-filling-string-templates)
+  - [Serialization](2_constructing_data/2_6_serialization/README.md#serialization)
+    - [Example - Serializing structures](2_constructing_data/2_6_serialization/README.md#example-261-serializing-structures)
+    - [Example - Parsing JSON structures](2_constructing_data/2_6_serialization/README.md#example-262-parsing-json-structures)
+- __Querying data__
+  - [Using getters](3_querying_data/3_1_getters/README.md#using-getters)
+    - [Example - Getting data from dictionaries (complex types)](3_querying_data/3_1_getters/README.md#example-311---getting-data-from-dictionaries-complex-types)
+      - [Getting dictionary size](3_querying_data/3_1_getters/README.md#getting-dictionary-size)
+      - [Getting dictionary values by key](3_querying_data/3_1_getters/README.md#getting-dictionary-values-by-key)
+      - [Getting all values from a dictionary](3_querying_data/3_1_getters/README.md#getting-all-values-from-a-dictionary)
+      - [Getting all keys from a dictionary](3_querying_data/3_1_getters/README.md#getting-all-keys-from-a-dictionary)
+    - [Example - Getting data from arrays](3_querying_data/3_1_getters/README.md#example-312---getting-data-from-arrays)
+      - [Getting array length](3_querying_data/3_1_getters/README.md#getting-array-length)
+      - [Getting array element by index](3_querying_data/3_1_getters/README.md#getting-array-element-by-index)
+      - [Getting the first & last array elements](3_querying_data/3_1_getters/README.md#getting-the-first--last-array-elements)
+  - [Using filters](3_querying_data/3_2_filters/README.md#using-filters)
+    - [Example - Filtering an array](3_querying_data/3_2_filters/README.md#example-321---filtering-an-array)
+  - [Using mappers](3_querying_data/3_3_mappers/README.md#using-mappers)
+    - [Example - Transforming array to values calculated from elements](3_querying_data/3_3_mappers/README.md#example-331-transforming-array-to-values-calculated-from-elements)
+    - [Example - Left-joining collections](3_querying_data/3_3_mappers/README.md#example-332-grouping-child-elements-to-parent---mapping-with-external-parameters)
+  - [Using reducers](3_querying_data/3_4_reducers/README.md#using-reducers)
+    - [Example - Summing array values](3_querying_data/3_4_reducers/README.md#example-341-summing-array-values)
+- __Using APIs__
+  - TODO: merge HTTP tutorials
+- __Working with file IO__
+  - Coming soon
+- __Working with OS processes__
+  - Coming soon
