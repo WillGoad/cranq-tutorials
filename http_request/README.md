@@ -23,16 +23,16 @@ New concepts:
 - We need a http dispatcher for calling the api
   - add a _io/http/Request dispatcher_ node by search
   - rename it to **get task**
-  - set the Value of the &lt;verb&gt; port to **"GET"**
-  - set the Value of the &lt;headers&gt; port to **""** (empty string)
-  - set the Value of the &lt;body&gt; port to **""** (empty string)
+  - set the _Value_ of the &lt;verb&gt; port to **"GET"**
+  - set the _Value_ of the &lt;headers&gt; port to **""** (empty string)
+  - set the _Value_ of the &lt;body&gt; port to **""** (empty string)
 - We need at least one signal for triggering [get task] node. We use the &lt;url&gt; input port for it
   - add a new _data/Store_ node by search for storing the url of the api
   - rename it to **url**
-  - set the Value of the &lt;data&gt; port to **"https://jsonplaceholder.typicode.com/todos/1"**
+  - set the _Value_ of the &lt;data&gt; port to **"https://jsonplaceholder.typicode.com/todos/1"**
 - Connect the &lt;data&gt; output port of the [url] node to the &lt;url&gt; input port of [get task] node
 - Connect the &lt;start&gt; input port of [http get example] parent node to the &lt;read&gt; input port of [url] node
-- The data type of the Value of &lt;body&gt; output of [get task] node is string. We would like to use it as an object so we need to parse it to JSON.
+- The data type of the _Value_ of &lt;body&gt; output of [get task] node is string. We would like to use it as an object so we need to parse it to JSON.
   - add _data/dictionary/JSON parser_ node by search
   - rename it to **body to json object**
 - Connect the &lt;body&gt; output port of [get task] node to &lt;json&gt; input port of [body to json object]
@@ -121,18 +121,50 @@ New concepts:
 - Connect the &lt;data&gt; output port of [taskid 2] node to &lt;task id&gt; input port of [get todo #2] node
 - Connect the &lt;task&gt; output port of [get todo #1] node to &lt;json&gt; input port of [todo response to json] node
 - Connect the &lt;task&gt; output port of [get todo #2] node to &lt;json&gt; input port of [todo response to json] node
-- Save the project
+  b - Save the project
 - When you run the program you get the data of the todo with id 1 and id 2
 
 ### Example 4 - Http Post
 
-Objective: Post #209 task to https://jsonplaceholder.typicode.com/ and write the result to the console
+Objective: Post #201 task to https://jsonplaceholder.typicode.com/todos and write the result to the console
 
 New concepts:
 
 - use http dispatcher for posting data
 
 !["Http get app in Cranq"](./http_request_4.png)
+
+**Steps:**
+
+- Add new CRANQ program save it as http_request_4.cranqj
+- Create a new structure node for the example
+  - rename the node to **http post example**
+  - add new input port to it and rename it to **start**
+  - add new output port to it and rename it to **log**
+- Navigate into the [http get example] node by double click
+- We need a http dispatcher for calling the api
+  - add a _io/http/Request dispatcher_ node by search
+  - rename it to **post todo data**
+  - set the _Value_ of the &lt;verb&gt; input port to **"POST"**
+  - set the _Value_ of the &lt;url&gt; input port to **"https://jsonplaceholder.typicode.com/todos"**
+  - set the _Value_ of the &lt;headers&gt; input port to **{"content-type": "application/json"}**
+- We need a _data/Store_ for storing the post data
+  - add it by search
+  - rename it to **todo data**
+  - set the _Value_ of the &lt;data&gt; input port to **{"userId": 99,"id": 201,"title": "CRANQ todo", "completed": false}** JSON
+- The data type of the _Value_ of &lt;body&gt; input of [post todo data] node is string. We need a JSON serializer to be able to connect to [todo data].
+  - Add a _data/dictionary/JSON serializer_ node by search.
+  - rename it to **serialize todo data**
+- The data type of the _Value_ of &lt;body&gt; output of [get task] node is string. We would like to use it as an object so we need to parse it to JSON.
+  - add _data/dictionary/JSON parser_ node by search
+  - rename it to **body to json object**
+- Connect the &lt;read&gt; input port of [todo data] node to &lt;start&gt; input port of [http post example] parent node
+- Connect the &lt;data&gt; output port of [todo data] node to &lt;dict&gt; input port of [serialize todo data] node
+- Connect the &lt;json&gt; output port of [serialize todo data] node to &lt;body&gt; input port of [post todo data] node
+- Connect the &lt;body&gt; output port of [post todo data] node to &lt;json&gt; input port of [convert to json object] node
+- Connect the &lt;parsed&gt; output port of [convert to json object] node to &lt;log&gt; output port of [http post example] parent node
+- Save the project
+- When you run the program you get the data of the new todo with id 201
 
 ### Example 5 - Check Http dispatcher status
 
