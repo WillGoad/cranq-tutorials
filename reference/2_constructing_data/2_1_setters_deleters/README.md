@@ -1,6 +1,6 @@
 # Using setters & deleters
 
-Setters are the atomic data manipulation operations in Cranq. There are built-in nodes for dictionaries/complex types, and one for arrays.
+Setters are the atomic data manipulation operations in Cranq. There are built-in nodes for dictionaries/records, and one for arrays.
 
 ## Example - Adding/assigning items to dictionaries
 
@@ -32,7 +32,7 @@ Adding/assigning items in a dictionary can be performed with the ```data/diction
 
 Adding/assigning elements in arrays can be performed with the ```data/array/Item inserter``` node.
 - It takes the target array, the item to add, and the index to insert at as input
-- Over-indexing is possible, but the item will be added to the end of the array
+- Over-indexing is possible, but items can only be added to the end of the array
 
 ![](images/2021-07-19-13-45-44.png)
 
@@ -75,7 +75,6 @@ Deleting items from dictionaries by key can be performed with the ```data/dictio
 
 Deleting items from arrays is possible by index, with the ```data/array/Item deleter``` node.
 - It takes the array and the index to remove as arguments
-- It can be over-indexed, but in this case, the node will leave the input unchanged
 
 ![](images/2021-07-19-14-11-42.png)
 

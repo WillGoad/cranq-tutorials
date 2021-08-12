@@ -39,7 +39,6 @@ Take note of the output of this application:
 26 @start:7
 ```
 The logger being used here outputs the signal data, along with it's tag. 
-If you are unfamiliar with tags, please have a look at this[TODO: where?]
 
 Observing the tags here, we see that the iterator forked our original signal for each array item.
 

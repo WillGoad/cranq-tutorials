@@ -30,36 +30,33 @@ Dictionaries in Cranq can be merged with the ```data/dictionary/Merger``` node.
 
 Concatenating arrays in Cranq can be performed with the ```data/array/Concatenator``` node.
 
-
 ![](images/2021-07-19-14-27-25.png)
 
 - It simply takes 2 arrays & applies the items of "b" onto "a", in order
 - The example combines the node (```tutorials/data_constr/syncer_array_emps```) created in **[Example - Initializing an array with values](../2_4_syncer_splitter/README.md)** & the following test data:
   ```json
-  [
-    {
-      "EmpID": 001,
-      "Name": "Joan",
-      "Dept": "Accounting",
-      "HireDate": "2016-04-28",
-      "Salary": 2200
-    },
-    {
-      "EmpID": 002,
-      "Name": "Frank",
-      "Dept": "Facilities",
-      "HireDate": "2011-11-13",
-      "Salary": 2000
-    },
-    {
-      "EmpID": 003,
-      "Name": "Louis",
-      "Dept": "Legal",
-      "HireDate": "2015-09-01",
-      "Salary": 3000
+[
+	{
+        "EmpID": 1,
+        "Name": "Joan",
+        "Dept": "Accounting",
+        "HireDate": "2016-04-28",
+        "Salary": 2200
+    }, {
+        "EmpID": 2,
+        "Name": "Frank",
+        "Dept": "Facilities",
+        "HireDate": "2011-11-13",
+        "Salary": 2000
+    }, {
+        "EmpID": 3,
+        "Name": "Louis",
+        "Dept": "Legal",
+        "HireDate": "2015-09-01",
+        "Salary": 3000
     }
-  ]
-  ```
+]
+```
 
 ### Sample output:
 

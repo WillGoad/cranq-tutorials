@@ -74,7 +74,7 @@ As we can see, the output of the ```flow/Syncer``` is a dictionary of it's input
 >
 > Place node **tutorials/app_flow/array_repeater** or **[download .cranqj](cranqj/app_flow_repeater.cranqj)** 
 
-As mentioned in [previously](../1_1_junctions/README.md), iterators & it's derivatives (filters, mappers, reducers) create a new signal with a different tag for each item they process, which cannot be directly synchronized with the original signal. 
+As mentioned [previously](../1_1_junctions/README.md), iterators & it's derivatives (filters, mappers, reducers) create a new signal with a different tag for each item they process, which cannot be directly synchronized with the original signal. 
 
 The nodes that have this characteristics are the:
 - ```data/array/Iterator```

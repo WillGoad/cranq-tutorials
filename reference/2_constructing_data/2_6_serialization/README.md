@@ -1,6 +1,6 @@
 # Serialization
 
-Cranq supports JSON serialization / desarialization out of the box, for array and dictionary types & their combinations.
+Cranq supports JSON serialization / deserialization out of the box, for array and dictionary types & their combinations.
 
 For serializing a JSON structure to a string, the ```json/Serializer``` node can be used.
 - It takes a structure as an input

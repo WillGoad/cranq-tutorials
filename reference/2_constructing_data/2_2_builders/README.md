@@ -23,14 +23,14 @@ In this example, we use the ```data/array/Builder``` node to initialize an empty
 ]
 ```
 
-## Example - Building a complex type
+## Example - Building a record
 
 > **_Try out:_**
 >
 > Place node **tutorials/data_constr/init_complex_type** or **[download .cranqj](cranqj/data_constr_init_complex_type.cranqj)** 
 
 In this example, we will build a simple entity, representing an employee. 
-In Cranq, types complex types can currently be built as dictionaries.
+In Cranq, records can currently be built as dictionaries.
 To accomplish this, we will use the ```data/dictionary/Builder/keys & values``` node.
 
 ![](images/2021-07-15-12-47-30.png)

@@ -10,7 +10,7 @@ Getters are the atomic operation of querying in Cranq. There are number of built
 
 In this example, we will demonstrate the basic scenarios of retrieving data from dictionaries.
 
-These examples use the record generated in **[Example - Building a complex type](../../2_constructing_data/2_2_builders/README.md)**, to extract some information. 
+These examples use the record generated in **[Example - Building a record](../../2_constructing_data/2_2_builders/README.md)**, to extract some information. 
 - Place an instance of the tutorial node ```tutorials/data_constr/complex_type_simple```
 - Alternatively, you can build or specify your own
 

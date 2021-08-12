@@ -1,14 +1,14 @@
 # Using the flow/Syncer & Splitter nodes for data manipulation
 
-The ```flow/Syncer``` node in Cranq is a synchronization primitive, that combines the data content of it's input signals into a single output stucture. It can be construct both arrays & key-value pairs. 
+The ```flow/Syncer``` node in Cranq is a synchronization primitive, that combines the data content of it's input signals into a single output stucture. It can be construct both arrays & dictionaries.
 
 The syncer node features a dynamic input port set (spread port):
 - It's ```fields``` input takes an array, which determines the quantity and names of its input ports
-- The names of these input ports will determine whether the node yields an array, or a key-value pair collection
+- The names of these input ports will determine whether the node creates an array, or a dictionary
 
 For example:
  - ```fields``` value ```[0,1,2]``` will result in ports ```0, 1, 2```, and will yield an array with 3 elements
- - ```fields``` value ```["a","b","c"]``` will result in ports ```a, b, c```, and will yiled a key-value pair collection with 3 elements
+ - ```fields``` value ```["a","b","c"]``` will result in ports ```a, b, c```, and will produce a dictionary with 3 elements
 
 > **_More info:_**
 >
@@ -20,7 +20,7 @@ For example:
 >
 > Place node **tutorials/data_constr/syncer_array** or **[download .cranqj](cranqj/data_constr_syncer_array.cranqj)** 
 
-Let's take the schema created in [Example - Building a complex type](../2_2_builders/README.md), and construct a collection of employee records:
+Let's take the schema created in [Example - Building a record](../2_2_builders/README.md), and construct a collection of employee records:
 
 ![](images/2021-07-15-15-51-55.png)
 
@@ -63,7 +63,7 @@ Let's take the schema created in [Example - Building a complex type](../2_2_buil
 ```
 
 
-## Example - Combining structures
+## Example - Combining records
 
 > **_Try out:_**
 >
@@ -117,7 +117,7 @@ In this example, let's create a collection describing the departments, and combi
 ```
 
 
-## Example - Splitting structures by keys
+## Example - Splitting records by keys
 
 > **_Try out:_**
 >

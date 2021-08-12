@@ -77,7 +77,7 @@ As a reminder, here is our test dataset:
 ![](images/2021-07-19-09-17-58.png)
 
 - Drilling into the new node, place a reducer & set it's ```initial``` input to a static value of ```0```
-- Connect the ```item``` output to a ```dictionary/Item getter```, that will select the salary propery of each item - set it's ```key``` input to a static value of ```"Salary"```
+- Connect the ```item``` output to a ```dictionary/Item getter```, that will select the salary property of each item - set it's ```key``` input to a static value of ```"Salary"```
 - Place a ```number/Adder``` node, and connect it's inputs to:
   - The result of the aforementioned node
   - The ```part reduced``` node of the reducer

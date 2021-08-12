@@ -13,7 +13,7 @@ Mappers can be used to map each element of an array to a value, typically calcul
 >
 > For application flow use cases of mappers, check out  **[Application flow - Iterators / loops](../../1_application_flow/1_2_iterators/README.md)**
 
-## Example - Selecting from collections of complex types
+## Example - Selecting from collections of records
 
 > **_Try out:_**
 >
