@@ -19,7 +19,7 @@ Mappers can be used to map each element of an array to a value, typically calcul
 >
 > Place node **tutorials/data_qry/get_emp_names** or **[download .cranqj](cranqj/data_qry_mapper_property_select.cranqj)** 
 
-In **[Example - Concatenating arrays](../../2_constructing_data/2_3_merge_concat/README.md)**, we created an array of employee records - building on this dataset, let's implement a node, that outputs the employee names.
+In **[Example - Concatenating arrays](../../2_constructing_data/2_4_merge_concat/README.md)**, we created an array of employee records - building on this dataset, let's implement a node, that outputs the employee names.
 
 As a reminder, here is our test dataset:
 
@@ -92,7 +92,7 @@ As a reminder, here is our test dataset:
 >
 > Place node **tutorials/data_qry/mapper_emps_by_dept** or **[download .cranqj](cranqj/data_qry_mapper_join.cranqj)** 
 
-In **[Example - Combining structures](../../2_constructing_data/2_4_syncer_splitter/README.md)**, we created a repository node, that builds a dataset with Employee and Department records.
+In **[Example - Combining structures](../../2_constructing_data/2_3_syncer_splitter/README.md)**, we created a repository node, that builds a dataset with Employee and Department records.
 Using this node, let's create one that joins employees to their departments, and outputs the result.
 
 As a reminder, here is our test dataset:

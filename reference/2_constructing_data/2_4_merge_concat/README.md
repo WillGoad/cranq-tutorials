@@ -33,7 +33,7 @@ Concatenating arrays in Cranq can be performed with the ```data/array/Concatenat
 ![](images/2021-07-19-14-27-25.png)
 
 - It simply takes 2 arrays & applies the items of "b" onto "a", in order
-- The example combines the node (```tutorials/data_constr/syncer_array_emps```) created in **[Example - Initializing an array with values](../2_4_syncer_splitter/README.md)** & the following test data:
+- The example combines the node (```tutorials/data_constr/syncer_array_emps```) created in **[Example - Initializing an array with values](../2_3_syncer_splitter/README.md)** & the following test data:
   ```json
 [
 	{

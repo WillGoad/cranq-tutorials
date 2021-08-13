@@ -21,7 +21,7 @@ Reducers are akin to mappers - instead of mapping each collection item to anothe
 >
 > For application flow use cases of reducers, check out  **[Application flow - Iterators / loops](../../1_application_flow/1_2_iterators/README.md)**
 
-In **[Example - Concatenating arrays](../../2_constructing_data/2_3_merge_concat/README.md)**, we created an array of employee records - let's take this dataset, and implement a node, that calculates the sum of employee salaries.
+In **[Example - Concatenating arrays](../../2_constructing_data/2_4_merge_concat/README.md)**, we created an array of employee records - let's take this dataset, and implement a node, that calculates the sum of employee salaries.
 
 As a reminder, here is our test dataset:
 

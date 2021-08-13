@@ -7,7 +7,7 @@ The closes analogy to an imperative "foreach" statement in Cranq is an "Iterator
 As it's name suggests, an iterator iterates through a data collection, and emits a signal with each element on it's output. 
 
 However, the iterator creates a new signal with distinct tags for each element - as a result:
-- It is inherently parallel
+- The processing is parallel
 - The order in which the outputs are emitted, is not deterministic
 - The output signals of an iterator will need to be synchronized, if needed
 
@@ -42,11 +42,11 @@ The logger being used here outputs the signal data, along with it's tag.
 
 Observing the tags here, we see that the iterator forked our original signal for each array item.
 
-Let's extend this example with a ```flow/Delayer```, representing an expensive processing operation - this will block the flow of data for each element, for a specified amount of time:
+Let's extend this example with a ```flow/Delayer```, representing an expensive processing operation - this will block the flow of data for each element. Set the ```delay``` input to 2000, representing 2000ms/2sec:
 
-![](images/2021-08-03-09-19-45.png)
+![](images/2021-08-13-13-09-14.png)
 
-Upon executing this code, the parallel nature of the processing can be observed.
+Upon running this, the whole operation will be concluded in 2 seconds, demonstrating the parallel nature.
 
 ## Example - Parallel filtering
 

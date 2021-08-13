@@ -6,7 +6,7 @@ Cranq offers the following synchronization primitives to manage application flow
 
 The ```flow/Syncer``` aggregates the input signals & forwards it only, once all of it's inputs received a trigger. 
 - It's counterpart is ```flow/Splitter```, which is capable of splitting up the aggregated signal to the original signals.
-- They both have dynamic input/output ports, allowing the developer to scale them as needed
+- They both have dynamic input/output ports (spread ports), allowing the developer to scale them as needed
 - They are useful for building a synchronization point on node inputs, making sure the node executes only once all (or some) of it's inputs are fulfilled
 - They can also be used for merging & splitting data structures, as [demonstrated later](cranqj/app_flow_sync_split.cranqj)
 
@@ -15,7 +15,7 @@ The ```flow/Syncer``` aggregates the input signals & forwards it only, once all 
 The ```flow/Multiplexer``` node also combines several inputs into a single output, without synchronization
 - The input is forwarded immediately, retaining the input port the original signal was received on. 
 - It's counterpart is ```flow/Demultiplexer```
-- They both have dynamic input/output ports, allowing the developer to scale them as needed
+- They both have dynamic input/output ports (spread ports), allowing the developer to scale them as needed
 
 ### Repeater
 
@@ -32,7 +32,7 @@ The ```flow/Repeater``` node duplicates the signal it receives, assigning unique
 
 > **_More info:_**
 >
-> For data manipulation use cases of the syncer/splitter nodes, check out  **[Constructing data - Using the flow/Syncer & Splitter nodes for data manipulation](../../2_constructing_data/2_4_syncer_splitter/README.md)**
+> For data manipulation use cases of the syncer/splitter nodes, check out  **[Constructing data - Using the flow/Syncer & Splitter nodes for data manipulation](../../2_constructing_data/2_3_syncer_splitter/README.md)**
 
 
 This example demonstrates the basic usage of the ```flow/Syncer``` & ```flow/Splitter``` nodes.

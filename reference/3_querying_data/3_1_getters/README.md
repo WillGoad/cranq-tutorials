@@ -108,7 +108,7 @@ The node will output an array of all the keys found in the dictionary.
 
 In this example, we will demonstrate the basic scenarios of retrieving data from arrays.
 
-The example uses the employee list generated in **[Example - Building arrays with values](../../2_constructing_data/2_4_syncer_splitter/README.md)**, to extract some information. 
+The example uses the employee list generated in **[Example - Building arrays with values](../../2_constructing_data/2_3_syncer_splitter/README.md)**, to extract some information. 
 - Place an instance of the tutorial node ```tutorial/data_constr/syncer_array_emps```
 - Alternatively, you can build or specify your own
 
