@@ -177,6 +177,40 @@ New concepts:
 
 !["Http get app in Cranq"](./http_request_5.png)
 
+**Steps**
+
+- Load previously created CRANQ program (http_request_1.cranqj)
+- Save it as http_request_5 .cranqj
+- Rename the [http get example] node as **http get with parameterized url**
+- Navigate into [http get with parameterized url] node
+- Delete [body to json object] node
+- Set the _Value_ of the &lt;data&gt; input port of <url> node to **"https://jsonplaceholder.typicode.com/a/todos/1"** (not existing endpoint)
+- Add _number/Equality tester_ for checking the status code
+  - rename it to **verify status code**
+  - set the _Value_ of the &lt;b&gt; input port **200**
+- Add _flow/Fork_ node for write the proper message to the console based on the status code verification
+  - add the node by search
+  - rename it to **is status code 200?**
+- Add _data/Store_ nodes for storing the verification result messages
+  - add the first node by search
+  - rename it to **status is 200**
+  - set the _Value_ of the &lt;data&gt; input port **"status is 200"**
+  - add the second node by search
+  - rename it to **status is not 200**
+  - set the _Value_ of the &lt;data&gt; input port **"status is not 200"**
+- Connect the &lt;status&gt; output port of [get task] node to &lt;a&gt; input port of [verify status code] node
+- Connect the &lt;status&gt; output port of [get task] node to &lt;data&gt; input port of [is status code 200?] node
+- Connect the &lt;true&gt; output port of [is status code 200?] node to &lt;data&gt; input port of [status is 200] node
+- Connect the &lt;false&gt; output port of [is status code 200?] node to &lt;data&gt; input port of [status is not 200] node
+- We want to connect both the <status is 200> and <status is not 200> nodes to the &lt;log&gt; output of the so we need a _flow/Forwarder_
+- add _flow/Forwarder_ node by search
+  \_ rename it to forward log
+- Connect the &lt;data&gt; output port of [status is 200] node to &lt;data&gt; input port of [forward log] node
+- Connect the &lt;data&gt; output port of [status is not 200] node to &lt;data&gt; input port of [forward log] node
+- Connect the &lt;data&gt; output port of [forward log] node to &lt;log&gt; input port of [http get status code example] parent node
+- Save the project
+- When you run the program you see the following log message: _"status is not 200" @start_ which is correct because the status code was 404
+
 ### Example 6 - Check Http dispatcher error
 
 Objective: Get data from not existing url and write the error to the console
