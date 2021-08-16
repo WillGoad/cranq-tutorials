@@ -14,7 +14,7 @@ New concepts:
 
 **Steps:**
 
-- Add new CRANQ program save it as http_request_1.cranqj
+- Add new CRANQ project save it as http_request_1.cranqj
 - Create a new structure node for the example
   - rename the node to **http get example**
   - add new input port to it and rename it to **start**
@@ -36,7 +36,7 @@ New concepts:
   - add _data/dictionary/JSON parser_ node by search
   - rename it to **body to json object**
 - Connect the &lt;body&gt; output port of [get task] node to &lt;json&gt; input port of [body to json object]
-- Connect the &lt;parsed&gt; output port of [body to json object] node to &lt;log&gt; input port of [http get example] parent node
+- Connect the &lt;parsed&gt; output port of [body to json object] node to &lt;log&gt; output port of [http get example] parent node
 - Save the project
 - When you run the program you get the data of the todo with id 1
 
@@ -50,7 +50,7 @@ New concepts:
 
 **Steps:**
 
-- Load the previously created CRANQ program (http_request_1.cranqj)
+- Load the previously created http_request_1.cranqj CRANQ project
 - Save it as http_request_2.cranqj
 - Rename the [http get example] node as **http get with parameterized url**
 - Navigate into [http get with parameterized url] node
@@ -83,7 +83,7 @@ New concepts:
 
 **Steps:**
 
-- Load the previously created CRANQ program (http_request_2.cranqj)
+- Load the previously created http_request_2.cranqj CRANQ project
 - Save it as http_request_3.cranqj
 - Rename the [http get example] node as **reusable task getter example**
 - Navigate into [reusable task getter example] node
@@ -112,7 +112,7 @@ New concepts:
   - rename it **get todo #2**
 - Rename [taskid] node to **taskid 1**
 - Set the _Value_ of the &lt;data&gt; input port of [taskid 1] node to **1**
-- Add a _data/Store_ node by searc
+- Add a _data/Store_ node by search
   - name it **taskid 2**
   - set the _Value_ of the &lt;data&gt; input port of [taskid 2] node to **2**
 - Connect the &lt;read&gt; input port of [taskid 1] node to &lt;start&gt; input port of [reusable task getter example] parent node
@@ -136,7 +136,7 @@ New concepts:
 
 **Steps:**
 
-- Add new CRANQ program save it as http_request_4.cranqj
+- Add new CRANQ project save it as http_request_4.cranqj
 - Create a new structure node for the example
   - rename the node to **http post example**
   - add new input port to it and rename it to **start**
@@ -179,7 +179,7 @@ New concepts:
 
 **Steps**
 
-- Load previously created CRANQ program (http_request_1.cranqj)
+- Load the previously created http_request_1.cranqj CRANQ project
 - Save it as http_request_5 .cranqj
 - Rename the [http get example] node as **http get with parameterized url**
 - Navigate into [http get with parameterized url] node
@@ -220,3 +220,17 @@ New concepts:
 - use Http dispatcher error output port
 
 !["Http get app in Cranq"](./http_request_6.png)
+
+**Steps:**
+
+- Load the previously created http_request_1.cranqj CRANQ project
+- Save it as http_request_6.cranqj
+- Rename the [http get example] node as **http error check example**
+- Navigate into the [http error check example] node by double click
+- Set the _Value_ of the &lt;data&gt; port to invalid url **"http://x.y.z"**
+- Delete node [body to json object]
+- Connect the &lt;error&gt; output port of [get task] node to &lt;log&gt; output port of [http get example] parent node
+- Save the project
+- When you run the program you see the following log message: {
+  "error": "Error: getaddrinfo ENOTFOUND x.y.z"
+  } @start
